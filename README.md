@@ -41,6 +41,15 @@ Examples:
 All available Rails helpers work nicely. Pure prototyping bliss!
 
 
+Hooks
+-----
+
+Carpentry let's you add a `#before_carpentry` method in 
+`ApplicationController`, that will be run before any prototype. You can 
+use it, for example, to provide authentication or prevent prototypes 
+from being rendered in production.
+
+
 Gotchas
 -------
 
@@ -53,3 +62,4 @@ License
 -------
 
 MIT License. Copyright 2011 Kisko Labs.
+
