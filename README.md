@@ -63,3 +63,9 @@ License
 
 MIT License. Copyright 2011 Kisko Labs.
 
+
+CI Build Status
+---------------
+
+[![Build Status](http://travis-ci.org/kiskolabs/carpentry.png)](http://travis-ci.org/kiskolabs/carpentry)
+
