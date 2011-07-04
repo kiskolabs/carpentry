@@ -1,0 +1,9 @@
+2011-07-04  Carpentry 1.0.1
+
+	* Bugfix: Render public/404.html when #consider_all_requests_local is	false
+		and set the response status code to 404.
+
+
+2011-06-07  Carpentry 1.0.0
+
+	* Initial release
