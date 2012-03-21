@@ -40,6 +40,9 @@ Examples:
 
 All available Rails helpers work nicely. Pure prototyping bliss!
 
+If you want an special layout for your prototypes, stick the layout file 
+to `app/views/layouts/carpentry/prototypes.html.[format]`.
+
 
 Hooks
 -----
