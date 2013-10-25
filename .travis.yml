@@ -4,5 +4,5 @@ rvm:
   - 1.9.3
   - jruby-19mode
   - rbx-19mode
-bundler_args: "--without development"
+bundler_args: ""
 script: "bundle exec rake spec"
