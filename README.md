@@ -54,9 +54,11 @@ from being rendered in production.
 Rails and Ruby compatiblity
 ---------------------------
 
-Only **Ruby 1.9.3** and above are tested, check [Travis CI][travis] for build details.
-
 Carpentry is compatible with **Rails 3.2** and **Rails 4.0**.
+
+Only **Ruby 1.9.3** and above are supported, check [Travis CI][travis] for build details.
+
+If you want to use Carpentry with Ruby 1.9.2 or below, use [Carpentry v1.0.1][v1].
 
 Gotchas
 -------
@@ -78,3 +80,4 @@ CI Build Status
 [![Build Status](https://travis-ci.org/kiskolabs/carpentry.png?branch=master)][travis]
 
 [travis]: https://travis-ci.org/kiskolabs/carpentry
+[v1]: https://github.com/kiskolabs/carpentry/tree/v1.0.1
