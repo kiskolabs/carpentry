@@ -6,3 +6,5 @@ rvm:
   - rbx-19mode
 bundler_args: ""
 script: "bundle exec rake spec"
+notifications:
+  disable: true
