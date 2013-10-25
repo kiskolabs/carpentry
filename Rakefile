@@ -1,18 +1,21 @@
 # encoding: UTF-8
-require 'rubygems'
 begin
   require 'bundler/setup'
 rescue LoadError
   puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
 end
 
-require 'rake'
-require 'rake/task'
+require "rdoc/task"
+RDoc::Task.new do |rdoc|
+  rdoc.rdoc_dir = 'rdoc'
+  rdoc.title    = 'Carpentry'
+  rdoc.options << '--line-numbers'
+  rdoc.rdoc_files.include('README.md')
+  rdoc.rdoc_files.include('lib/**/*.rb')
+end
 
-require 'rspec/core'
-require 'rspec/core/rake_task'
-
+require "rspec/core/rake_task"
 RSpec::Core::RakeTask.new(:spec)
-Bundler::GemHelper.install_tasks
-
 task :default => :spec
+
+Bundler::GemHelper.install_tasks
