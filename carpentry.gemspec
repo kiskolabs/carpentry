@@ -13,6 +13,8 @@ Gem::Specification.new do |s|
   s.description = "Handcrafted prototypes for Rails."
   s.licenses    = ["MIT"]
 
+  s.required_ruby_version = ">= 1.9.3"
+
   s.files = Dir["{app,lib,config}/**/*"] + ["Rakefile", "Gemfile", "README.md"]
 
   s.add_dependency("railties", ">= 3.2.6", "< 5")
