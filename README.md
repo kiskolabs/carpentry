@@ -64,7 +64,7 @@ When rendering a partial, you must specify the full path
 License
 -------
 
-MIT License. Copyright 2011 Kisko Labs.
+MIT License. Copyright 2011-2013 Kisko Labs.
 
 
 CI Build Status

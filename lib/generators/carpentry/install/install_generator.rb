@@ -5,6 +5,10 @@ module Carpentry
         empty_directory "app/views/carpentry/prototypes"
         create_file "app/views/carpentry/prototypes/.gitkeep"
       end
+
+      def add_carpentry_routes
+        route 'mount Carpentry::Engine => "/p"'
+      end
     end
   end
 end

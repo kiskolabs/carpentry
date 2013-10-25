@@ -1,4 +1,5 @@
 # require "carpentry/no_robots_middleware"
+require "carpentry/engine"
 
 module Carpentry
   class Engine < ::Rails::Engine
