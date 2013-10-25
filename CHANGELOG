@@ -1,9 +1,16 @@
+2013-10-25  Carpentry 2.0.0
+
+  * Breaking change: drops support for Ruby 1.9.2 and below
+  * Breaking change: Carpentry must now be mounted in your application's routes file
+  * Adds support for Rails 4
+  * The tests now target Rails 4
+
 2011-07-04  Carpentry 1.0.1
 
-	* Bugfix: Render public/404.html when #consider_all_requests_local is	false
-		and set the response status code to 404.
+  * Bugfix: Render public/404.html when #consider_all_requests_local is  false
+    and set the response status code to 404.
 
 
 2011-06-07  Carpentry 1.0.0
 
-	* Initial release
+  * Initial release
