@@ -1,6 +1,11 @@
 require "spec_helper"
 
 describe "Rendering" do
+  it "renders the application root path if defined" do
+    get "/"
+    response.body.should include("ROOT")
+  end
+
   it "renders index.html.erb at /p" do
     get "/p"
     response.body.should include("INDEX FILE")

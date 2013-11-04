@@ -9,7 +9,7 @@ Installation
 
 Add Carpentry to Gemfile:
 
-    gem "carpentry", "~> 2.1.0"
+    gem "carpentry", "~> 2.1.1"
 
 Run the generator to create the prototypes folder (and inject the Carpentry route):
 
