@@ -7,7 +7,7 @@ module Carpentry
       end
 
       def add_carpentry_routes
-        route 'mount Carpentry::Engine => "/p"'
+        route 'mount_carpentry_at "/p"'
       end
     end
   end
