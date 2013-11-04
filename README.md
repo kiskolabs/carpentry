@@ -9,7 +9,7 @@ Installation
 
 Add Carpentry to Gemfile:
 
-    gem "carpentry"
+    gem "carpentry", "~> 2.1.0"
 
 Run the generator to create the prototypes folder (and inject the Carpentry route):
 
@@ -39,7 +39,7 @@ to `app/views/layouts/carpentry/prototypes.html.[format]`.
 You can customize the prototype URI prefix (`/p`) by editing the engine mount in your `roures.rb` file, for example:
 
 ```
-  mount Carpentry::Engine => "/prototype"
+  mount_carpentry_at "/prototype"
 ```
 
 Hooks
