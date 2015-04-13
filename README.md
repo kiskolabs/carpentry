@@ -54,7 +54,7 @@ from being rendered in production.
 Rails and Ruby compatiblity
 ---------------------------
 
-Carpentry is compatible with **Rails 4.0** and above.
+Carpentry is compatible with **Rails 4.1** and above.
 
 Only **Ruby 2.1.x** and above are supported, check [Travis CI][travis] for build details.
 
