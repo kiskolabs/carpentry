@@ -1,6 +1,8 @@
 Carpentry
 =========
 
+[![Build Status](https://travis-ci.org/kiskolabs/carpentry.svg?branch=master)](https://travis-ci.org/kiskolabs/carpentry) [![Gem Version](https://badge.fury.io/rb/carpentry.svg)](http://badge.fury.io/rb/carpentry)
+
 Handcrafted prototypes with ease.
 
 
@@ -9,7 +11,7 @@ Installation
 
 Add Carpentry to Gemfile:
 
-    gem "carpentry", "~> 2.1.1"
+    gem "carpentry"
 
 Run the generator to create the prototypes folder (and inject the Carpentry route):
 
