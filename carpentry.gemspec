@@ -13,15 +13,15 @@ Gem::Specification.new do |s|
   s.description = "Handcrafted prototypes for Rails."
   s.licenses    = ["MIT"]
 
-  s.required_ruby_version = ">= 1.9.3"
+  s.required_ruby_version = ">= 2.1.0"
 
   s.files = Dir["{app,lib,config}/**/*"] + ["Rakefile", "Gemfile", "README.md"]
 
   s.add_dependency("railties", ">= 3.2.6", "< 5")
 
   s.add_development_dependency "rdoc"
-  s.add_development_dependency "rails", "~> 4.0.0"
+  s.add_development_dependency "rails", "~> 4.2.1"
   s.add_development_dependency "capybara", ">= 0.4.0"
   s.add_development_dependency "autotest-standalone"
-  s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "rspec-rails", "~> 2.14.2"
 end
