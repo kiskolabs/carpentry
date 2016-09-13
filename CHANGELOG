@@ -1,3 +1,7 @@
+2016-09-13  Carpentry 2.2.1
+
+  * Allow usage with Rails < 5.1 (produces deprecation warnings)
+
 2015-04-13  Carpentry 2.2.0
 
   * Breaking change: Support Rails 4.1 and above only
