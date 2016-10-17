@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.2.1
+  - 2.3.1
   - 2.1.5
   - jruby-19mode
 gemfile:
@@ -9,5 +9,12 @@ gemfile:
   - Gemfile.rails-4.2.x
 bundler_args: ""
 script: "bundle exec rake spec"
+before_install:
+  - gem install bundler
 notifications:
   disable: true
+
+matrix:
+  exclude:
+  - rvm: 2.1.5
+    gemfile: gemfiles/Gemfile
