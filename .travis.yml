@@ -13,7 +13,7 @@ script: "./bin/rspec spec"
 before_install:
 - gem install bundler
 notifications:
-  disable: true
+  email: false
 deploy:
   provider: rubygems
   api_key:
@@ -22,3 +22,4 @@ deploy:
   on:
     tags: true
     repo: kiskolabs/carpentry
+    condition: "$BUNDLE_GEMFILE = $PWD/Gemfile"
