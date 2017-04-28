@@ -6,6 +6,10 @@ rvm:
 - 2.3
 - 2.4
 - jruby-9.1.7.0
+addons:
+  apt:
+    packages:
+      - haveged
 gemfile:
 - Gemfile
 - Gemfile.rails-5.0.x
