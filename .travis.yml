@@ -22,4 +22,5 @@ deploy:
   on:
     tags: true
     repo: kiskolabs/carpentry
+    ruby: 2.4
     condition: "$BUNDLE_GEMFILE = $PWD/Gemfile"
