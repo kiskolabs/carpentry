@@ -1,4 +1,4 @@
 source "http://rubygems.org"
 gemspec
 
-gem "rails", "~> 4.1.10"
+gem "rails", "~> 5.0.0"
