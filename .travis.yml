@@ -5,11 +5,9 @@ rvm:
   - jruby
 gemfile:
   - Gemfile
-  - Gemfile.rails-4.2.x
   - Gemfile.rails-5.0.x
   - Gemfile.rails-5.1.x
-bundler_args: ""
-script: "bundle exec rake spec"
+script: ./bin/rspec spec
 before_install:
   - gem install bundler
 notifications:

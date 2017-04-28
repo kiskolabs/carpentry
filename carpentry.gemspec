@@ -23,5 +23,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rails", ">= 4.2.0", "< 6.0"
   s.add_development_dependency "capybara", ">= 0.4.0"
   s.add_development_dependency "autotest-standalone"
-  s.add_development_dependency "rspec-rails", "~> 2.14.2"
+  s.add_development_dependency "rspec-rails", "~> 2.99"
 end
