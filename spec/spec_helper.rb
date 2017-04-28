@@ -13,9 +13,7 @@ require "rails/test_help"
 require "rspec/rails"
 
 # Configure capybara for integration testing
-require "capybara/rails"
-Capybara.default_driver   = :rack_test
-Capybara.default_selector = :css
+require "capybara/rspec"
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
