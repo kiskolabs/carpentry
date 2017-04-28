@@ -3,15 +3,23 @@ dist: trusty
 cache: bundler
 language: ruby
 rvm:
-  - 2.3
-  - 2.4
-  - jruby
+- 2.3
+- 2.4
+- jruby
 gemfile:
-  - Gemfile
-  - Gemfile.rails-5.0.x
-  - Gemfile.rails-5.1.x
-script: ./bin/rspec spec
+- Gemfile
+- Gemfile.rails-5.0.x
+- Gemfile.rails-5.1.x
+script: "./bin/rspec spec"
 before_install:
-  - gem install bundler
+- gem install bundler
 notifications:
   disable: true
+deploy:
+  provider: rubygems
+  api_key:
+    secure: Qng7FzbYWSU+R5Ou+hsg3EiyGwWQ2DVEP/Oc3zksVBT0zGy+/c2XgIvbZvw9KdcR0TNW4sLa135twwyQS5Qnfjq/jogKrBnR9uHvxvvVIIvN/kPO8HG0XFXg4IW+M/pbC25iZMo/x1HnYlKqWpCol8d86fbtjL8tT/clB10ulRM=
+  gem: carpentry
+  on:
+    tags: true
+    repo: kiskolabs/carpentry
