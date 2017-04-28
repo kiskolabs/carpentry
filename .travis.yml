@@ -1,5 +1,6 @@
 sudo: false
 dist: trusty
+cache: bundler
 language: ruby
 rvm:
   - 2.3
