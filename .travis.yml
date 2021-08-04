@@ -3,16 +3,18 @@ dist: trusty
 cache: bundler
 language: ruby
 rvm:
-- 2.3
-- 2.4
+  - 2.3
+  - 2.6
+  - 2.7
+  - 3.0
 gemfile:
-- Gemfile
-- Gemfile.rails-5.0.x
-- Gemfile.rails-5.1.x
-- Gemfile.rails-6.0.x
+  - Gemfile
+  - Gemfile.rails-5.0.x
+  - Gemfile.rails-5.1.x
+  - Gemfile.rails-6.0.x
 script: "./bin/rspec spec"
 before_install:
-- gem install bundler
+  - gem install bundler
 notifications:
   email: false
 deploy:
