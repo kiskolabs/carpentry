@@ -1,3 +1,7 @@
+2021-08-04  Carpentry 2.2.4
+
+  * Allow usage with Rails < 6.1
+
 2017-04-28  Carpentry 2.2.3
 
   * Allow usage with Rails < 6.0
