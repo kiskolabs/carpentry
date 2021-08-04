@@ -9,6 +9,7 @@ gemfile:
 - Gemfile
 - Gemfile.rails-5.0.x
 - Gemfile.rails-5.1.x
+- Gemfile.rails-6.0.x
 script: "./bin/rspec spec"
 before_install:
 - gem install bundler
