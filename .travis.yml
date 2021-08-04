@@ -11,6 +11,13 @@ gemfile:
   - Gemfile.rails-5.0.x
   - Gemfile.rails-5.1.x
   - Gemfile.rails-6.0.x
+jobs:
+  exclude:
+    - rvm: 3.0
+    - gemfile: Gemfile.rails-5.0.x
+  exclude:
+    - rvm: 3.0
+    - gemfile: Gemfile.rails-5.1.x
 script: "./bin/rspec spec"
 before_install:
   - gem install bundler
