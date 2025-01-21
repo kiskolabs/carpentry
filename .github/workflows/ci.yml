@@ -1,0 +1,42 @@
+name: CI
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - kiskolabs/github-actions
+  pull_request:
+    branches:
+      - kiskolabs/github-actions
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby: [2.6, 2.7, 3.0]
+        gemfile:
+          - Gemfile
+          - Gemfile.rails-5.0.x
+          - Gemfile.rails-5.1.x
+          - Gemfile.rails-6.0.x
+          - Gemfile.rails-6.1.x
+        exclude:
+          - ruby: 3.0
+            gemfile: Gemfile.rails-5.0.x
+          - ruby: 3.0
+            gemfile: Gemfile.rails-5.1.x
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - name: Run tests
+        run: |
+          bundle exec rspec
