@@ -25,7 +25,7 @@ jobs:
       gemfile: Gemfile.rails-5.1.x
 script: "./bin/rspec spec"
 before_install:
-  - gem install bundler -v 2.4.22
+  - gem install bundler -v 2.0
 notifications:
   email: false
 deploy:
