@@ -24,5 +24,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency "concurrent-ruby", "<= 1.3.4"
   s.add_development_dependency "capybara", "~> 2.13"
   s.add_development_dependency "autotest-standalone"
-  s.add_development_dependency "rspec-rails", "~> 3.4"
+  s.add_development_dependency "rspec-rails"
+
+  if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('3.4')
+    s.add_development_dependency "bigdecimal"
+    s.add_development_dependency "mutex_m"
+  end
 end
