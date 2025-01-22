@@ -29,5 +29,6 @@ Gem::Specification.new do |s|
   if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('3.4')
     s.add_development_dependency "bigdecimal"
     s.add_development_dependency "mutex_m"
+    s.add_development_dependency "drb"
   end
 end
