@@ -1,0 +1,53 @@
+name: CI
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - kiskolabs/add_rails_6.1_and_ruby_3_4
+
+  pull_request:
+    branches:
+      - kiskolabs/add_rails_6.1_and_ruby_3_4
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        ruby: ['2.6', '2.7', '3.0', '3.4']
+        gemfile:
+          - Gemfile
+          - Gemfile.rails-5.0.x
+          - Gemfile.rails-5.1.x
+          - Gemfile.rails-6.0.x
+          - Gemfile.rails-6.1.x
+
+        exclude:
+          - ruby: 3.0
+            gemfile: Gemfile.rails-5.0.x
+          - ruby: 3.4
+            gemfile: Gemfile.rails-5.0.x
+          - ruby: 3.0
+            gemfile: Gemfile.rails-5.1.x
+          - ruby: 3.4
+            gemfile: Gemfile.rails-5.1.x
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler: '2.4'
+          bundler-cache: true
+          cache-version: 1 # ignore contents of the cache and get and build all the gems anew.
+
+      - name: Run tests
+        run: |
+          bundle exec rspec
