@@ -1,0 +1,36 @@
+name: Deploy to RubyGems
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - v*.*.*
+
+permissions:
+  contents: read
+
+jobs:
+  push:
+    if: github.repository == 'kiskolabs/carpentry'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      id-token: write
+
+    steps:
+      # Set up
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: 2.6
+
+      # Release
+      - uses: rubygems/release-gem@v1
