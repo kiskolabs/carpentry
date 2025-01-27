@@ -3,8 +3,9 @@ name: Deploy to RubyGems
 on:
   workflow_dispatch:
   push:
-    tags:
-      - v*.*.*
+    branches: [master]
+    paths:
+      - "lib/*/version.rb"
 
 permissions:
   contents: read
