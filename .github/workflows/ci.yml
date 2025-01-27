@@ -5,14 +5,8 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  workflow_call:
   push:
-    branches:
-      - kiskolabs/add_rails_6.1_and_ruby_3_4
-
   pull_request:
-    branches:
-      - kiskolabs/add_rails_6.1_and_ruby_3_4
 
 jobs:
   test:
