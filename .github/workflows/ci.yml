@@ -21,6 +21,8 @@ jobs:
           - Gemfile.rails-5.1.x
           - Gemfile.rails-6.0.x
           - Gemfile.rails-6.1.x
+          - Gemfile.rails-7.2.x
+          - Gemfile.rails-8.0.x
 
         exclude:
           - ruby: 3.0
@@ -31,6 +33,18 @@ jobs:
             gemfile: Gemfile.rails-5.1.x
           - ruby: 3.4
             gemfile: Gemfile.rails-5.1.x
+          - ruby: '2.6'
+            gemfile: Gemfile.rails-7.2.x
+          - ruby: '2.7'
+            gemfile: Gemfile.rails-7.2.x
+          - ruby: '3.0'
+            gemfile: Gemfile.rails-7.2.x
+          - ruby: '2.6'
+            gemfile: Gemfile.rails-8.0.x
+          - ruby: '2.7'
+            gemfile: Gemfile.rails-8.0.x
+          - ruby: '3.0'
+            gemfile: Gemfile.rails-8.0.x
 
     steps:
       - name: Checkout code
