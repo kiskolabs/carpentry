@@ -10,5 +10,9 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
+# Rails 7.1+ no longer depends on sprockets-rails by default, but the dummy
+# app at spec/dummy still does `require "sprockets/railtie"`.
+gem "sprockets-rails"
+
 # To use debugger
 # gem 'debugger'
